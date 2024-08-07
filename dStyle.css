@@ -1,0 +1,12 @@
+table{
+
+border: 2px solid gray;
+
+padding: 2px;
+
+}
+
+.center{
+	width: 50%;
+	margin: auto;
+}
