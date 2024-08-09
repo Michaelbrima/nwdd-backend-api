@@ -13,7 +13,7 @@ var tbody = document.getElementById('tbody');
 // const url = 'https://api.dictionaryapi.dev/api/v2/entries/en/hello';
 const url = `https://api.dictionaryapi.dev/api/v2/entries/en/${wordInput}`;
 const link =`https://api.dictionaryapi.dev/api/v2/entries/en`;
-var wordListLink = 'http://localhost:4000/api/words';
+var wordListLink = 'https://json-server-2-7lu9.onrender.com/words';
 //Get - Read the posts
 //Method: GET
 // fetch(url)
@@ -135,7 +135,7 @@ async function loadHTMLTable(data) {
     }
 
 //     if(data.length !== 0) {
-//     const response = await fetch(wordListLink)
+//     const response = await fetch('https://json-server-2-7lu9.onrender.com/words')
 //     const enteredData = await response.json()
 //         // var j = 0;
 //         enteredData.forEach(enteredData => {
@@ -305,7 +305,7 @@ preTable.addEventListener('click', (e) => {
 // const wordObject = {id, word, partOfSpeech, definition}
 // const wordObject
 
-         fetch('https://json-server-2-7lu9.onrender.com/words', {
+         fetch(wordListLink, {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json'
