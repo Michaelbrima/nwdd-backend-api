@@ -166,7 +166,7 @@ async function loadHTMLTable(data) {
 
 // For loading the word list (GET Request):
 table.onload = function() {
-    fetch(wordListLink
+    fetch('https://json-server-2-7lu9.onrender.com/words'
     //     , {
     //     body: JSON.stringify({
     //         word: wordID,
@@ -183,7 +183,7 @@ table.onload = function() {
 //     partOfSpeech,
 //     definition
 // }))
-// const response = fetch(wordListLink)
+// const response = fetch('https://json-server-2-7lu9.onrender.com/words')
 //     const data = response.json()
 //         // var j = 0;
 //         data.forEach(data => {
@@ -256,7 +256,7 @@ fetch('https://json-server-2-7lu9.onrender.com/words')
 //     const table = document.getElementById('tbody');
 //    // if(wordInput =! null){
 //        let url = `https://api.dictionaryapi.dev/api/v2/entries/en`;
-//    const response = await fetch(wordListLink)
+//    const response = await fetch('https://json-server-2-7lu9.onrender.com/words')
 //    const edata = await response.json()
 //        // var j = 0;
 //        edata.forEach(edata => {
@@ -305,7 +305,7 @@ preTable.addEventListener('click', (e) => {
 // const wordObject = {id, word, partOfSpeech, definition}
 // const wordObject
 
-         fetch(wordListLink, {
+         fetch('https://json-server-2-7lu9.onrender.com/words', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json'
