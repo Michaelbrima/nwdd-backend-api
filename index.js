@@ -209,7 +209,7 @@ table.onload = function() {
 
 
 // For retrieving the saved words when the webpage is first loaded (GET Request):
-fetch('http://localhost:4000/api/words')
+fetch('https://json-server-2-7lu9.onrender.com/words')
   .then(response => {
     if (!response.ok) {
       throw new Error('Network response was not ok');
@@ -305,7 +305,7 @@ preTable.addEventListener('click', (e) => {
 // const wordObject = {id, word, partOfSpeech, definition}
 // const wordObject
 
-         fetch(wordListLink, {
+         fetch('https://json-server-2-7lu9.onrender.com/words', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json'
@@ -345,7 +345,7 @@ table.addEventListener('click', (e) => {
 // const wordObject = {id, word, partOfSpeech, definition}
 // const wordObject
 
-         fetch(wordListLink, {
+         fetch('https://json-server-2-7lu9.onrender.com/words', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json'
@@ -374,7 +374,7 @@ table.addEventListener('click', (e) => {
         
         // if(word = wordID){
             // id = id;
-        fetch(wordListLink + "/" + id, {
+        fetch('https://json-server-2-7lu9.onrender.com/words' + "/" + id, {
             method: 'DELETE',
         })
         .then(res => res.json())
