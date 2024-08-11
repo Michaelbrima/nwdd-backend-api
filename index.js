@@ -13,7 +13,7 @@ var tbody = document.getElementById('tbody');
 // const url = 'https://api.dictionaryapi.dev/api/v2/entries/en/hello';
 const url = `https://api.dictionaryapi.dev/api/v2/entries/en/${wordInput}`;
 const link =`https://api.dictionaryapi.dev/api/v2/entries/en`;
-var wordListLink = 'https://new-word-dictionary-database.vercel.app/';
+var wordListLink = 'https://json-server-2-7lu9.onrender.com/words';
 //Get - Read the posts
 //Method: GET
 // fetch(url)
@@ -135,7 +135,7 @@ async function loadHTMLTable(data) {
     }
 
 //     if(data.length !== 0) {
-//     const response = await fetch('https://new-word-dictionary-database.vercel.app/')
+//     const response = await fetch(wordListLink)
 //     const enteredData = await response.json()
 //         // var j = 0;
 //         enteredData.forEach(enteredData => {
@@ -166,7 +166,7 @@ async function loadHTMLTable(data) {
 
 // For loading the word list (GET Request):
 table.onload = function() {
-    fetch('https://new-word-dictionary-database.vercel.app/'
+    fetch(wordListLink
     //     , {
     //     body: JSON.stringify({
     //         word: wordID,
@@ -183,7 +183,7 @@ table.onload = function() {
 //     partOfSpeech,
 //     definition
 // }))
-// const response = fetch('https://new-word-dictionary-database.vercel.app/')
+// const response = fetch(wordListLink)
 //     const data = response.json()
 //         // var j = 0;
 //         data.forEach(data => {
@@ -209,7 +209,7 @@ table.onload = function() {
 
 
 // For retrieving the saved words when the webpage is first loaded (GET Request):
-fetch('https://new-word-dictionary-database.vercel.app/')
+fetch(wordListLink)
   .then(response => {
     if (!response.ok) {
       throw new Error('Network response was not ok');
@@ -256,7 +256,7 @@ fetch('https://new-word-dictionary-database.vercel.app/')
 //     const table = document.getElementById('tbody');
 //    // if(wordInput =! null){
 //        let url = `https://api.dictionaryapi.dev/api/v2/entries/en`;
-//    const response = await fetch('https://new-word-dictionary-database.vercel.app/')
+//    const response = await fetch(wordListLink)
 //    const edata = await response.json()
 //        // var j = 0;
 //        edata.forEach(edata => {
@@ -305,7 +305,7 @@ preTable.addEventListener('click', (e) => {
 // const wordObject = {id, word, partOfSpeech, definition}
 // const wordObject
 
-         fetch('https://new-word-dictionary-database.vercel.app/', {
+         fetch(wordListLink, {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json'
@@ -345,7 +345,7 @@ table.addEventListener('click', (e) => {
 // const wordObject = {id, word, partOfSpeech, definition}
 // const wordObject
 
-         fetch('https://new-word-dictionary-database.vercel.app/', {
+         fetch(wordListLink, {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json'
@@ -374,7 +374,7 @@ table.addEventListener('click', (e) => {
         
         // if(word = wordID){
             // id = id;
-        fetch('https://new-word-dictionary-database.vercel.app/' + "/" + id, {
+        fetch(wordListLink + "/" + id, {
             method: 'DELETE',
         })
         .then(res => res.json())
