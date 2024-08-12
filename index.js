@@ -13,7 +13,7 @@ var tbody = document.getElementById('tbody');
 // const url = 'https://api.dictionaryapi.dev/api/v2/entries/en/hello';
 const url = `https://api.dictionaryapi.dev/api/v2/entries/en/${wordInput}`;
 const link =`https://api.dictionaryapi.dev/api/v2/entries/en`;
-var wordListLink = 'http://localhost:4000/api/words';
+var wordListLink = 'https://json-server-2-7lu9.onrender.com/words';
 //Get - Read the posts
 //Method: GET
 // fetch(url)
@@ -209,7 +209,7 @@ table.onload = function() {
 
 
 // For retrieving the saved words when the webpage is first loaded (GET Request):
-fetch('http://localhost:4000/api/words')
+fetch(wordListLink)
   .then(response => {
     if (!response.ok) {
       throw new Error('Network response was not ok');
