@@ -12,7 +12,7 @@ const mongoose = require('mongoose');
 const { MONGO_URI } = require('./config');
 
 //Routes
-const wordsRoutes = require('./routes/api/words');
+const wordsRoutes = require("./routes/api/words");
 
 //Connect to MongoDB:
 mongoose.connect(MONGO_URI)
@@ -42,7 +42,7 @@ app.use(express.json(
 
 //app.use(express.urlencoded({ extended: true }));
 
-app.use("/openai", wordsRoutes)
+app.use("/openai", cors(), wordsRoutes)
 
 app.get('/welcome', cors(), (req, res) => {
     res.status(200).send("Welcome to FreeCodeCamp!!!");
